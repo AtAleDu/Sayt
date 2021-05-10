@@ -1,0 +1,456 @@
+﻿<Window x:Class="Сайт.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Сайт"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="5450" Width="800">
+    
+    <!--Cтиль-->
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="5"
+                                Background="{TemplateBinding Background}">
+
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+ 
+
+    <ScrollViewer>
+        <!--Строки-->
+        <Grid Background="#F5F5F5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" >
+
+                </RowDefinition>
+                <RowDefinition Height="600" />
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="650"/>
+                <RowDefinition Height="400"/>
+                <RowDefinition Height="2300"/>
+                <RowDefinition Height="400" />
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+        <!--Колонки-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160*"/>
+                <ColumnDefinition Width="1600*"/>
+                <ColumnDefinition Width="160*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="3" Background="#17BAEF"/>
+            <StackPanel Grid.Row="2" Grid.ColumnSpan="3" Background="#0C86AE"/>
+            <StackPanel Grid.Row="3" Grid.ColumnSpan="3" Background="#F5F5F5"/>
+            <StackPanel Grid.Row="4" Grid.ColumnSpan="3" Background="#17BAEF"/>
+            <StackPanel Grid.Row="7" Grid.ColumnSpan="3" Background="#1A496F"/>
+
+            <Button Grid.Row="0" Grid.Column="1" Content="devAid" Width="120" Height="40" HorizontalAlignment="Left"  Style="{StaticResource MaterialDesignFlatButton}" Foreground="White" FontSize="25"  FontWeight="Bold" Click="sow"/>
+
+            <!--Кнопки-->
+            <Border Grid.Column="1" Margin="0 0 0 0" Width="550" HorizontalAlignment="Right" >
+                <StackPanel Orientation="Horizontal">
+                    <Button Width="85" Height="40" Margin="50 0 0 0" Style="{StaticResource MaterialDesignFlatButton}" Content="About" Foreground="#0D739E" FontWeight="Light"/>
+                    <Button Width="85" Height="40" Margin="15 0 0 0" Style="{StaticResource MaterialDesignFlatButton}" Content="Features" Foreground="#0D739E" FontWeight="Light"/>
+                    <Button Width="85" Height="40" Margin="15 0 0 0" Style="{StaticResource MaterialDesignFlatButton}" Content="Docs" Foreground="#0D739E" FontWeight="Light"/>
+                    <Button Width="85" Height="40" Margin="15 0 0 0" Style="{StaticResource MaterialDesignFlatButton}" Content="License" Foreground="#0D739E" FontWeight="Light"/>
+                    <Button Width="85" Height="40" Margin="15 0 0 0" Style="{StaticResource MaterialDesignFlatButton}" Content="Contact" Foreground="#0D739E" FontWeight="Light"/>
+                </StackPanel>
+            </Border>
+            <!--Название сайта-->
+            <Border Grid.Column="1" Grid.Row="1" Width="320" Height="110" VerticalAlignment="Top" Margin="0 100 0 0" >
+                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
+                    <TextBlock  Text="dev" Foreground="#074C62" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="95" FontWeight="Bold" />
+                    <TextBlock  Text="Aid" Foreground="#EEBF3F" FontSize="95" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                </StackPanel>
+            </Border>
+            <!--Текст-->
+            <TextBlock TextWrapping="Wrap" Grid.Column="1" Grid.Row="1" Width="500" Height="70" Margin="0 0 0 80">
+                <Run Text="A free mobile-friendly Bootstrap theme designed to" FontSize="21" FontWeight="Medium" Foreground="White"/>
+                <LineBreak />
+                <Run Text="    help developers promote their personal projects" FontSize="21" Foreground="White" FontWeight="Medium"  />
+            </TextBlock>
+            <!--Кнопки-->
+            <Border Grid.Column="1" Grid.Row="1" Width="300" Height="42" Margin="0 60 0 0">
+                <StackPanel Orientation="Horizontal">
+                    <Button  Width="120" Height="42" Background="#EEBF3F" Content="DEMO" FontSize="18" FontWeight="Bold" Foreground="White"/>
+                    <Button  Width="160" Height="42" Background="#074F66" Content="DOWNLOAD" FontSize="18" FontWeight="Bold" Foreground="White" Margin="10 0 0 0"/>
+                </StackPanel>
+            </Border>
+            <!--Ссылки-->
+            <Border Grid.Column="1" Grid.Row="1" Width="550" Height="40" VerticalAlignment="Bottom">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="15" >
+                          <Hyperlink NavigateUri="page2.xaml" Foreground="#0A7396" >View on GitHub</Hyperlink>
+                    </TextBlock>
+                    <TextBlock FontSize="15" Margin="30
+                               0 0 0">
+                        <Hyperlink NavigateUri="wq" Foreground="#0A7396">Full Documentation</Hyperlink>
+                    </TextBlock>
+                    <TextBlock FontSize="15" Foreground="#0A7396" Margin="30 0 0 0">
+                              
+                        Created by:<Hyperlink NavigateUri="wq" Foreground="#0A7396">Xiaoying Riley</Hyperlink> at 3rd Wave Media
+                    </TextBlock>
+
+                </StackPanel>
+            </Border>
+            <!--Кнопки с картинками-->
+            <Border Grid.Column="1" Grid.Row="2" Width="500" Height="50">
+                <StackPanel Orientation="Horizontal" >
+                    <Button Height="18" Background="#1B95E0">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/twitter.bmp" Width="12" Height="12" Margin="2 0 0 0  "/>
+                            <TextBlock Text=" Follow @3rdwave_theams" Foreground="White"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Height="18" Width="60" Background="#1B95E0" Margin="10 0 0 0">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/twitter.bmp" Width="12" Height="12" />
+                            <TextBlock Text="Tweet" Foreground="White"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Height="18" Width="60" Foreground="#FAFAFA" Margin="20 0 0 0 " >
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Без названия.jpg" Margin=" 0 0 4 0" Height="15" Width="15" />
+
+                            <TextBlock Text="Star" Foreground="Black" FontWeight="Bold"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Content="2.660" Height="18" Width="60" FontWeight="Bold"/>
+                    <Button Height="18" Width="60" Foreground="#FAFAFA" Margin="40 0 0 0 ">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Без названия.jpg" Height="15" Width="15" Margin="0 0 5 0" />
+                            <TextBlock Text="Fork" Foreground="Black" FontWeight="Bold"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Border>
+            
+            <StackPanel Grid.Column="1" Grid.Row="3">
+            <Border Grid.Column="1" Grid.Row="3" Background="#F5F5F5" Height="200">
+                    <StackPanel>
+                        <TextBlock Text="What is devAid?" TextAlignment="Center" Width="400" Height="65" VerticalAlignment="Top" Margin="0 30 0 0"  FontSize="35" FontWeight="DemiBold" Foreground="#074F7D"  />
+                        <TextBlock TextWrapping="Wrap" Height="100" Width="800"  Margin="0 30 0 0" TextAlignment="Center" >
+                        <Run   Text="Explain your project in detail. Ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate." FontSize="15" />
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+                <!--Окошки с текстам и картинками  -->
+                <Border Height="220">
+                    <StackPanel Orientation="Horizontal">
+                        <Border Width="450" Height="150" HorizontalAlignment="Left" Margin="0 30 0 0">
+                            <StackPanel>
+                                <!--Текст с лицом-->
+                                <TextBlock TextWrapping="Wrap" >
+                                                    
+                                                        <Image Source="/Heart.png" Height="25"/>
+
+                                                    <Run Text="Designed for developers" Foreground="#074F66" FontWeight="Bold" FontSize="20" />
+                            
+                    `</TextBlock>
+                                <!--Текст с ссылкой-->
+                                <TextBlock TextWrapping="Wrap"  Margin="35 10 0 0" FontSize="15" >
+                                                     Outline a benefit here. Tell users what your plugin/software can do for them. You can change the icon above to any of the 400+
+                                                    <Hyperlink NavigateUri="22" >FontAwesome</Hyperlink> icons available.
+                                </TextBlock>
+
+                            </StackPanel>
+                        </Border>
+                        <!--Текст с Часы-->
+                        <Border Width="450" Height="150" HorizontalAlignment="Left" Margin="0 30 0 0">
+                            <StackPanel>
+                                <TextBlock TextWrapping="Wrap" >
+                                                    <Image Source="/клок.png" Height="25"/>
+
+
+
+                                                    <Run Text="Designed for developers" Foreground="#074F66" FontWeight="Bold" FontSize="20" />
+                            
+                    `</TextBlock>
+                                <!--Текст с ссылкой-->
+                                <TextBlock TextWrapping="Wrap"  Margin="35 10 0 0" FontSize="15" >
+                                                     Outline a benefit here. Tell users what your plugin/software can do for them. You can change the icon above to any of the 400+
+                                                    <Hyperlink NavigateUri="22" >FontAwesome</Hyperlink> icons available.
+                                </TextBlock>
+
+                            </StackPanel>
+                        </Border>
+
+                        <Border Width="450" Height="150" HorizontalAlignment="Left" Margin="0 30 0 0">
+                            <StackPanel>
+                                <TextBlock TextWrapping="Wrap" >
+                                                    <Image Source="/приц.png" Height="25" />
+
+                                                    <Run Text="Designed for developers" Foreground="#074F66" FontWeight="Bold" FontSize="20" />
+                            
+                    `</TextBlock>
+                                <TextBlock TextWrapping="Wrap"  Margin="35 10 0 0" FontSize="15" >
+                                                     Outline a benefit here. Tell users what your plugin/software can do for them. You can change the icon above to any of the 400+
+                                                    <Hyperlink NavigateUri="22" >FontAwesome</Hyperlink> icons available.
+                                </TextBlock>
+
+                            </StackPanel>
+                        </Border>
+
+                    </StackPanel>
+     
+                </Border>
+                <Border Height="220">
+
+                    <StackPanel Orientation="Horizontal">
+                        <!--Текст с телефоном-->
+                        <Border Width="450" Height="150" HorizontalAlignment="Left" Margin="0 0 0 60">
+                            <StackPanel>
+                                <TextBlock TextWrapping="Wrap" >
+                                                   <Image Source="/ТЕЛ.png" Height="25" />
+
+                                                    <Run Text="Mobile-friendly" Foreground="#074F66" FontWeight="Bold" FontSize="20" />
+                            
+                    `</TextBlock>
+                                <TextBlock TextWrapping="Wrap"  Margin="35 10 0 0" FontSize="15" >
+                                                     Outline a benefit here. Tell users what your plugin/software can do for them. You can change the icon above to any of the 400+
+                                                    <Hyperlink NavigateUri="22" >FontAwesome</Hyperlink> icons available.
+                                </TextBlock>
+
+                            </StackPanel>
+                        </Border>
+                        <!--Текст с телефоном-->
+                        <Border Width="450" Height="150" Margin="0 0 0 60" >
+                            <StackPanel>
+                                <TextBlock TextWrapping="Wrap">
+                                                      <Image Source="/Безымянный.png" Height="25" />
+
+                                                        <Run Text="Easy to customise" Foreground="#074F66" FontWeight="Bold" FontSize="20" />
+                            
+                    `</TextBlock>
+                                <TextBlock TextWrapping="Wrap"   Margin="35 10 0 0" FontSize="15" >
+                                                        Outline a benefit here. Tell users what your plugin/software can do for them. You can change the icon above to any of the 400+
+                                                        <Hyperlink NavigateUri="22" >FontAwesome</Hyperlink> icons available.
+                                </TextBlock>
+
+                            </StackPanel>
+                        </Border>
+                        <!--Текст с кружка-->
+                        <Border Width="450" Height="150" Margin="0 0 0 60">
+                            <StackPanel>
+                                <TextBlock TextWrapping="Wrap">
+                                                       <Image Source="/кружка.png" Height="25"/>
+
+                                                        <Run Text="LESS files included" Foreground="#074F66" FontWeight="Bold" FontSize="20" />
+
+                                </TextBlock>
+                                <TextBlock TextWrapping="Wrap"   Margin="35 10 0 0" FontSize="15" >
+                                                    Outline a benefit here. Tell users what your plugin/software can do for them. You can change the icon above to any of the 400+
+                                                    <Hyperlink NavigateUri="22" >FontAwesome</Hyperlink> icons available.
+                                </TextBlock>
+
+                            </StackPanel>
+                        </Border>
+                     
+
+
+                    </StackPanel>
+
+                </Border>
+
+          
+
+            </StackPanel>
+            <!--Особенности сайта-->
+            <Border Grid.Column="1" Grid.Row="4" >
+                <TextBlock TextAlignment="Center" Margin="0 50 0 0" Foreground="#074F66">
+                        <Run Text="Features" FontSize="30" FontWeight="Bold" />
+                        <LineBreak/>
+                        <LineBreak/>
+                    
+                        <Image Source="/галака.png" Height="15" />
+
+                        <Run Text="Fully responsive" FontSize="15"/>
+                        <LineBreak/>
+                    <LineBreak/>
+                        <Image Source="/галака.png" Height="15" />
+                        <Run Text="HTML5 + CSS3" FontSize="15"/>
+                        <LineBreak/>    
+                    <LineBreak/>
+                    <Image Source="/галака.png" Height="15" />
+                        <Run Text="Built on Bootstrap 3.3" FontSize="15"/>
+                        <LineBreak/>    
+                    <LineBreak/>
+                    <Image Source="/галака.png" Height="15" />
+                        <Run Text="400+ FontAwesome icons" FontSize="15"/>
+                    <LineBreak/>    
+                    <LineBreak/>
+                    <Image Source="/галака.png" Height="15" />
+                        <Run Text=" 4 colour schemes" FontSize="15"/>
+                    <LineBreak/>    
+                    <LineBreak/>
+                    <Image Source="/галака.png" Height="15" />
+                        <Run Text="LESS files included" FontSize="15"/>
+                    <LineBreak/>    
+                    <LineBreak/>
+                    <Image Source="/галака.png" Height="15" />
+                        <Run Text=" Compatible with all modern browsers" FontSize="15"/>
+                </TextBlock>
+            </Border>
+            <StackPanel Grid.Column="1" Grid.Row="5">
+                <Border  Height="1600" Width="800" Background="#FFFFFF" Margin="0 80 0 0">
+                    <StackPanel Orientation="Vertical">
+                        <!--Название-->
+                        <TextBlock Text="Get Started" TextAlignment="Center" Margin="0 30 0 0" FontWeight="Bold" FontSize="30" Foreground="#074F66"/>
+                        <TextBlock Text="HTML" TextAlignment="Center" Margin="0 20 0 0" FontWeight="Bold" FontSize="25" Foreground="#17BAEF" />
+                        <TextBlock Padding="30 0 0 0" FontSize="15">
+                            <Hyperlink Foreground="#17C0F3">PrismJS</Hyperlink> is used as the syntax highlighter here.
+                            <LineBreak />
+                            <LineBreak />
+                             Below are the details of the custom PrismJS build used in this template. You can <Hyperlink> build your own version</Hyperlink> via
+                            <LineBreak/>
+                            their website should you need to.
+                            <LineBreak/>
+                            <LineBreak/>
+                            <Run Text="Compression level:" FontWeight="Medium"/>
+                            <Run Text=" Minified"/>
+                            <LineBreak/>
+                             <Run Text="Theme:" FontWeight="Medium"/>
+                             <Run Text=" Okaidia"/>
+                             <LineBreak/>
+                             <Run Text="Languages:" FontWeight="Medium"/>
+                             <Run Text=" Markup, CSS, C-like, JavaScript, PHP and Python"/>
+                        </TextBlock>
+                        <!--Код-->
+                        <Border Width="750" Height="140" Background="#272822" Margin="0 15 0 0" CornerRadius="8,8,3,3">
+                            <TextBlock Foreground="White" FontSize="17" Margin="60 40 0 0">
+                                &lt;<Run Text="p " Foreground="#F9266F"/>
+                                <Run Text="class" Foreground="#A6E22E"/>
+                                = &quot;<Run Text="my-style" Foreground="#DADB74"/>&quot;
+                                <LineBreak/>Hello World!
+                                <LineBreak/>
+                                <Run Text="p " Foreground="#F9266F"/>&gt;
+                            </TextBlock>
+
+                        </Border>
+                        <TextBlock Text="CSS" TextAlignment="Center" Margin="0 50 0 0" FontWeight="Bold" FontSize="25" Foreground="#17BAEF"  />
+                        <TextBlock Text="Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus." FontSize="16" TextWrapping="Wrap" Margin="30 0 0 0"/>
+                        <!--Код-->                       
+                        <Border Width="750" Height="400" Background="#272822" Margin="0 15 0 0" CornerRadius="8,8,3,3">
+                            <StackPanel>
+                                <TextBlock Foreground="#6D8090" FontSize="17" Margin="60 40 0 0">
+                                /*
+                                <LineBreak/>
+                                  * Template Name: devAid - Responsive Website Template for developers
+                                <LineBreak/>
+                                  * Version: 1.1
+                                <LineBreak/>
+                                 * Author: Xiaoying Riley at 3rd Wave Media
+                                <LineBreak/>
+                                 * Website: http://themes.3rdwavemedia.com/
+                                <LineBreak/>
+                                 * Twitter: @3rdwave_themes 
+                                <LineBreak/>
+                                */
+                                <LineBreak/>
+                                </TextBlock>
+                                <!--Задний фон-->
+                                <TextBlock Foreground="White" FontSize="17" Margin="60 0 0 0" >
+                                    <Run Text="body " Foreground="#9EE22E"/>{
+                                    <LineBreak/>
+                                    <Run Text="     font-family" Foreground="#F92672"/>:  &apos; Lato &apos; ,arial, sans-serif;
+                                    <LineBreak/>
+                                    <Run Text="     color" Foreground="#F92672"/>: #444444;
+                                    <LineBreak/>
+                                    <Run Text="     font-size" Foreground="#F92672"/>: 16px;
+                                    <LineBreak/>
+                                    <Run Text="     -webkit-font-smoothing" Foreground="#F92672"/>:  antialiased;
+                                    <LineBreak/>
+                                    <Run Text="     -moz-osx-font-smoothing" Foreground="#F92672"/>: grayscale;
+                                    <LineBreak/>}
+                                    <LineBreak/>
+
+
+
+                                </TextBlock>
+
+
+
+                            </StackPanel>
+
+                        </Border>
+                        <TextBlock Text="JavaScript" TextAlignment="Center" Margin="0 50 0 0" FontWeight="Bold" FontSize="25" Foreground="#17BAEF"  />
+
+                        <TextBlock Margin="30 0 0 0" Text="Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit ligula eget dolor." TextWrapping="Wrap" FontSize="15" />
+                        <!--Код-->
+                        <Border Width="750" Height="200" Background="#272822" Margin="0 15 0 0" CornerRadius="8,8,3,3">
+                            <TextBlock Foreground="White" FontSize="17" Margin="60 40 0 0">
+                                <Run Text="if" Foreground="#66D9EF"/> ( awesome ){
+                                <LineBreak/>
+                                <Run Text="      console.log("/>
+                                <Run Text="'This is Awesome'" Foreground="#A6E22E"/>);
+                                <LineBreak/>
+                                }<Run Text="else" Foreground="#66D9EF"/>{
+                                <LineBreak/>
+                                <Run Text="     $("/>
+                                <Run Text="'body'" Foreground="#A6E22E"/>).addClass(
+                                <Run Text="'give-me-awesome'" Foreground="#A6E22E"/>);
+                                <LineBreak/>
+                                }
+                            </TextBlock>
+
+                        </Border>
+                        <TextBlock Text="Full Documentation" TextAlignment="Center" Margin="0 50 0 0" FontWeight="Bold" FontSize="25" Foreground="#17BAEF"  />
+                        <TextBlock Text="If your documentation is very long you can host the full docs page (including FAQ etc) on GitHub and provide a Call to Action button below to direct users there " FontSize="16" TextWrapping="Wrap" Margin="30 0 0 0"/>
+                        <Button Content="MORE ON GITHUB" Height="40" Width="150" Background="#074F66" FontWeight="Bold" Foreground="White" Margin="0 30 0 0"/>
+                    </StackPanel>
+                </Border>
+                <!--Задний фон-->
+                <Border Height="540" Width="800" Background="#FFFFFF" Margin="0 80 0 0">
+                    <StackPanel>
+                        <TextBlock Text="License" TextAlignment="Center" Margin="0 20 0 0" FontWeight="Bold" FontSize="25" Foreground="#17BAEF"  />
+                        <TextBlock   Margin="30 50 0 0" FontSize="16"   >
+                            This Bootstrap theme is made by UX designer <Hyperlink>Xiaoying Riley</Hyperlink> at 3rd Wave Media for developers and is
+                            <LineBreak/>
+                            <Run Text="100% FREE " FontWeight="Bold"/>under the
+                            <Hyperlink>Creative Commons Attribution 3.0 License (CC BY 3.0)</Hyperlink>
+                            <LineBreak/>
+                            <LineBreak/>
+                            <Run Text="[Tip for developers]" FontWeight="Bold" /> If your project is open source, you might want to put a
+                            <Hyperlink>PayPal "Donate" button</Hyperlink> below
+                            <LineBreak/>
+                            so your users can express their gratitude. If your project is commercial, you can put a <Hyperlink>PayPal "Buy Now"</Hyperlink>
+                            <LineBreak/>
+                            <Hyperlink>button</Hyperlink>  instead.
+                        </TextBlock>
+                        <!--Рожа-->
+                        <Border Background="#D6F3FC" Width="500" Height="200" Margin="0 50 0 0" Name="face" CornerRadius="5">
+                            <StackPanel>
+                            <TextBlock Margin="25 20 0 0"  FontSize="16" TextWrapping="Wrap" Text="If you are feeling generous and want to show your support to Xiaoying, you can buy her a beer or coffee via the PayPal donate button below. :)">
+                                
+                            </TextBlock>
+                            <Image Source="/face.png" Width="60" Margin="0 20 0 0 "/>
+                            </StackPanel>
+                        </Border>
+                        <Button Width="100" Height="25" Margin="0 20 0 0" FontWeight="Bold" Content="Donate" Background="#FFC439">
+
+                        </Button>
+                    </StackPanel>
+                  
+                </Border>
+                
+            </StackPanel>
+
+            <Border Grid.Column="0" Grid.Row="6" Background="#17BAEF" Grid.ColumnSpan="3" Margin="0 40 0 0">
+                <StackPanel>
+                    <TextBlock Text="Contact" TextAlignment="Center" Margin="0 50 0 0" FontWeight="Bold" FontSize="25" Foreground="#074F66"  />
+                    
+                </StackPanel>
+            </Border>
+            
+        </Grid>
+    </ScrollViewer>
+</Window>
